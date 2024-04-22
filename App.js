@@ -7,32 +7,41 @@ import Dermatologista from "./src/Telas/Dermatologista"
 import Oftalmologista from "./src/Telas/Oftalmologista"
 import Ortopedista from "./src/Telas/Ortopedista"
 import Consultas from "./src/Telas/Consultas"
+import Integrantes from './src/Telas/Integrantes'
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <DataProvider>
-    <NavigationContainer>
-   <Stack.Navigator>
-    <Stack.Screen 
-      name= 'TelaInicial' component = {TelaInical}
-      options={{headerShown:false}}/>
-       <Stack.Screen 
-      name= 'Dermatologista' component = {Dermatologista}
-      options={{headerShown:false}}/>
-       <Stack.Screen 
-      name= 'Oftalmologista' component = {Oftalmologista}
-      options={{headerShown:false}}/>
-       <Stack.Screen 
-      name= 'Ortopedista' component = {Ortopedista}
-      options={{headerShown:false}}/>
-       <Stack.Screen 
-      name= 'Consultas' component = {Consultas}
-      options={{headerShown:false}}/>
-   </Stack.Navigator>
-   </NavigationContainer>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen 
+            name= 'TelaInicial' component = {TelaInical}
+            options={{headerShown:false}}
+          />
+          <Stack.Screen 
+            name= 'Dermatologista' component = {Dermatologista}
+            options={{headerShown:false}}
+          />
+          <Stack.Screen 
+            name= 'Oftalmologista' component = {Oftalmologista}
+            options={{headerShown:false}}
+          />
+          <Stack.Screen 
+            name= 'Ortopedista' component = {Ortopedista}
+            options={{headerShown:false}}
+          />
+          <Stack.Screen 
+            name= 'Consultas' component = {Consultas}
+            options={{headerShown:false}}
+          />
+          <Stack.Screen 
+            name= 'Integrantes' component = {Integrantes}
+            options={{headerShown:false}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </DataProvider>
-   
   );
 }
