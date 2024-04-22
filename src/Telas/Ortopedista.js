@@ -1,28 +1,28 @@
 import {ImageBackground, Text, StyleSheet, TouchableOpacity, TextInput} from 'react-native'
 import {useState} from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import Cabecalho from "../../components/Cabecalho"
+import { useData } from '../../context/ConsultasContext';
 
 
 
 const Ortopedista = () =>{
+   const { consultas, saveData } = useData();
    const [nomePaciente, setNomePaciente] = useState('');
    const [periodoConsulta, setPeriodoConsulta] = useState('');
+   const [dataConsulta, setDataConsulta] = useState('');
 
-    async function salvar(){
-    let consultas = [];
-    if (await AsyncStorage.getItem("CONSULTAS") !== null) {
-      consultas = JSON.parse(await AsyncStorage.getItem("CONSULTAS"));
-    }
-    consultas.push({especialista: 'Ortopedista', nome:nomePaciente,periodo:periodoConsulta})
-    console.log(consultas)
-    await AsyncStorage.setItem("CONSULTAS",JSON.stringify(consultas))
-  }
-   
+    const salvarConsulta = async () => {
+    const newConsultas = [...consultas, { especialista: 'Ortopedista', nome: nomePaciente, dia: dataConsulta, periodo: periodoConsulta }];
+    saveData(newConsultas);
+    alert("Consulta marcada com sucesso!")
+  };
 
 
   return(
     <ImageBackground source={require('../../assets/tela-de-fundo2.jpg')}>
-        <Text>Oftalmologista</Text>
+        <Cabecalho/>
+        <Text>Ortopedista</Text>
         <TextInput
         placeholder= 'Nome do paciente'
         value={nomePaciente}
@@ -30,11 +30,17 @@ const Ortopedista = () =>{
         />
 
         <TextInput
+        placeholder= 'Dia da consulta'
+        value={dataConsulta}
+        onChangeText={(value) => setDataConsulta(value)}
+        />
+
+        <TextInput
         placeholder= 'Período da consulta'
         value={periodoConsulta}
         onChangeText={(value) => setPeriodoConsulta(value)}
         />
-        <TouchableOpacity onPress={salvar}>
+        <TouchableOpacity onPress={salvarConsulta}>
         <Text>Marcar Consulta</Text>
         </TouchableOpacity>
 

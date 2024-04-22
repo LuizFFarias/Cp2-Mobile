@@ -1,5 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
+import {DataProvider} from "./context/ConsultasContext"
 
 import TelaInical from "./src/Telas/TelaInicial"
 import Dermatologista from "./src/Telas/Dermatologista"
@@ -11,7 +12,9 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-   <NavigationContainer>
+
+    <DataProvider>
+    <NavigationContainer>
    <Stack.Navigator>
     <Stack.Screen 
       name= 'TelaInicial' component = {TelaInical}
@@ -30,6 +33,8 @@ export default function App() {
       options={{headerShown:false}}/>
    </Stack.Navigator>
    </NavigationContainer>
+    </DataProvider>
+   
   );
 }
 

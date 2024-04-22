@@ -1,11 +1,12 @@
 import {ImageBackground, Text, StyleSheet, TouchableOpacity} from 'react-native'
-
+import Cabecalho from "../../components/Cabecalho"
 
 
 const TelaInical = (props) => {
 
   return( 
   <ImageBackground source={require('../../assets/tela-de-fundo2.jpg')} style= {styles.container}>
+  <Cabecalho navigation={props.navigation}/>
 
   <Text style={styles.texto}>Bem-vindo ao Oasis Health Center!
 </Text>
