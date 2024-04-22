@@ -5,7 +5,6 @@ import Cabecalho from "../../components/Cabecalho"
 import { useData } from '../../context/ConsultasContext';
 
 
-
 const Ortopedista = () =>{
    const { consultas, saveData } = useData();
    const [nomePaciente, setNomePaciente] = useState('');
@@ -17,7 +16,6 @@ const Ortopedista = () =>{
     saveData(newConsultas);
     alert("Consulta marcada com sucesso!")
   };
-
 
   return(
     <ImageBackground source={require('../../assets/tela-de-fundo2.jpg')}>
@@ -45,7 +43,7 @@ const Ortopedista = () =>{
         </TouchableOpacity>
 
     </ImageBackground>
-
   )
 }
+
 export default Ortopedista

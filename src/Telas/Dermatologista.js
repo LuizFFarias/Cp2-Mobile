@@ -16,8 +16,6 @@ const Dermatologista = () =>{
     alert("Consulta marcada com sucesso!")
   };
    
-
-
   return(
     <ImageBackground source={require('../../assets/tela-de-fundo2.jpg')}>
         <Cabecalho/>
@@ -44,7 +42,6 @@ const Dermatologista = () =>{
         </TouchableOpacity>
 
     </ImageBackground>
-
   )
 }
 export default Dermatologista

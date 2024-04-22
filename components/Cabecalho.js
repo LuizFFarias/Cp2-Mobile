@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
   }
 })
 
-
 const Cabecalho = (props) => {
   const navigation = useNavigation();
 

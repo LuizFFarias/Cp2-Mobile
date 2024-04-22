@@ -4,8 +4,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Cabecalho from "../../components/Cabecalho"
 
 
-
-
 const Consultas = ()=> {
  const[listaConsultas,setListaConsultas]=useState([])
 
@@ -17,6 +15,7 @@ const Consultas = ()=> {
     consultasMarcadas()
   },[])
   console.log(listaConsultas)
+
   return(
     <ImageBackground source={require('../../assets/tela-de-fundo2.jpg')}>
     <Cabecalho/>
@@ -28,11 +27,9 @@ const Consultas = ()=> {
           renderItem={({item})=>{
 
             return(
-             
                 <View>
                   <Text style={{fontSize:18}}>ESPECIALISTA:{item.especialista} DIA:{item.dia} NOME:{item.nome} PERIODO:{item.periodo}</Text>                
                 </View>
-
             )
           }}
       />
@@ -41,6 +38,3 @@ const Consultas = ()=> {
 }
 
 export default Consultas
-
-
-
