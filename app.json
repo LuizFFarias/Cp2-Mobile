@@ -4,10 +4,8 @@
     "slug": "snack-3df29251-ba3d-417b-983c-acd563928f13",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +17,11 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.luizffarias.snack3df29251ba3d417b983cacd563928f13"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
