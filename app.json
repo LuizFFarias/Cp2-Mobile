@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "61935638-553e-4eab-b3e4-e6bfcaec4db6"
+      }
+    },
+    "owner": "luizffarias"
   }
 }
