@@ -1,6 +1,7 @@
 import {ImageBackground, Text, StyleSheet, TouchableOpacity, TextInput, FlatList, View} from 'react-native'
 import {useState, useEffect} from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Cabecalho from "../../components/Cabecalho"
 
 
 
@@ -18,6 +19,7 @@ const Consultas = ()=> {
   console.log(listaConsultas)
   return(
     <ImageBackground source={require('../../assets/tela-de-fundo2.jpg')}>
+    <Cabecalho/>
     <Text>Consultas Marcadas: </Text>
 
      <FlatList
@@ -28,7 +30,7 @@ const Consultas = ()=> {
             return(
              
                 <View>
-                  <Text style={{fontSize:18}}>ESPECIALISTA:{item.especialista} NOME:{item.nome} PERIODO:{item.periodo}</Text>                
+                  <Text style={{fontSize:18}}>ESPECIALISTA:{item.especialista} DIA:{item.dia} NOME:{item.nome} PERIODO:{item.periodo}</Text>                
                 </View>
 
             )
