@@ -12,7 +12,6 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-
     <DataProvider>
     <NavigationContainer>
    <Stack.Navigator>
@@ -37,4 +36,3 @@ export default function App() {
    
   );
 }
-

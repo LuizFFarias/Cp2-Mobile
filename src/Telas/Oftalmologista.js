@@ -17,7 +17,6 @@ const Oftalmologista = () =>{
     alert("Consulta marcada com sucesso!")
   };
 
-
   return(
     <ImageBackground source={require('../../assets/tela-de-fundo2.jpg')}>
         <Cabecalho/>
@@ -34,7 +33,6 @@ const Oftalmologista = () =>{
         onChangeText={(value) => setDataConsulta(value)}
         />
 
-
         <TextInput
         placeholder= 'Período da consulta'
         value={periodoConsulta}
@@ -45,7 +43,7 @@ const Oftalmologista = () =>{
         </TouchableOpacity>
 
     </ImageBackground>
-
   )
 }
+
 export default Oftalmologista
