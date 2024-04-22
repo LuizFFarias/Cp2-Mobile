@@ -1,5 +1,6 @@
 import {ImageBackground, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import Cabecalho from "../../components/Cabecalho"
+import Integrantes from './Integrantes'
 
 
 const TelaInical = (props) => {
@@ -28,6 +29,10 @@ const TelaInical = (props) => {
 
     <TouchableOpacity onPress={()=>props.navigation.navigate('Consultas')}>
     <Text>Verificar Consultas Marcadas</Text>
+    </TouchableOpacity>
+
+    <TouchableOpacity onPress={()=>props.navigation.navigate('Integrantes')}>
+    <Text>Conheça nossos integrantes</Text>
     </TouchableOpacity>
 
     </ImageBackground>
